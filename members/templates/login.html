@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<title>Login</title>
+</head>
+<nav>
+    <label class="logo">ATMS</label>
+    <ul>
+        <li><a class="active" href="index">Dashboard</a></li>
+        <li><a href="login/">Login</a></li>
+    </ul>
+</nav>
+<body>
+	<div class="login-box">
+		<h1>ATMS Login</h1>
+		<form>
+			<label>ID</label>
+            <input type="text" placeholder="ID">
+            <div class="wrapper">
+            <label>Password</label>
+            <input type="password" placeholder="********"></div>
+            <input type="button" value="Submit">
+		</form>
+	</div>
+
+	
+	<p class="para-2">Create Account<a href="signup.html"> Sign Up Here</a></p>
+	<p class="para-2"><a href="index.html"> Cancel</a></p>
+</body>
+</html>

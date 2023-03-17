@@ -1,0 +1,47 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <nav>
+        <label class="logo">ATMS</label>
+        <ul>
+            <li><a class="active" href="dashboard/">Dashboard</a></li>
+            <li><a href="login/">Login</a></li>
+        </ul>
+    </nav>
+<body>
+    <div class ="w3-container">
+    
+        <div>
+            <table class="w3-table w3-striped w3-border">
+                <th>
+                    <tr>
+                        <td>Record ID</td>
+                        <td>Road ID</td>
+                        <td>Location ID</td>
+                        <td>Vehicle ID</td>
+                        <td>Time</td>
+                        <td>Date</td>
+                        <td>Intensity</td>
+                    </tr>
+                </th>
+                {% for x in mymembers %}
+                <tr>
+                <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+                <td>{{ x.id }}</td>
+                <td>{{ x.lastname }}</td>
+                <td><a href="delete/{{ x.id }}">delete</a></td>
+                </tr>
+                {% endfor %}
+                </table>
+                <p>
+                    <a href="add/"><input type="submit" value="Add Member"></a>
+                </p>
+        </div>
+    </div>
+</body>
+</html>
